@@ -1,0 +1,12 @@
+<%= link_to 'Edit', edit_path(@task), class: 'btn btn-secondary btn-sm' %>
+<%= link_to 'Delete', task_path(@task), class: 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+<h2><%= @task.title %></h2>
+
+<ul>
+<li><%= @task.details %></li>
+</ul>
+<p><%= @task.completed ? "☑️ This task is completed" : "❎ This task is not completed" %></p>
+
+<%= link_to '<< Back', tasks_path %>
